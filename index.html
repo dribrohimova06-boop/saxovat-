@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAXOVAT HUB - Volontyorlik Klubi</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="toast-container" id="toastContainer"></div>
+
+<!-- MAIN SITE -->
+<div id="mainSite" class="page active">
+<nav class="navbar">
+<div class="nav-container">
+<a href="#" class="logo" onclick="showSection('home')">
+<div class="logo-icon"><i class="fas fa-hand-holding-heart"></i></div>
+<div class="logo-text">SAXOVAT <span>HUB</span></div>
+</a>
+<ul class="nav-links">
+<li><a href="#" class="active" onclick="showSection('home')">Bosh sahifa</a></li>
+<li><a href="#" onclick="showSection('about')">Biz haqimizda</a></li>
+<li><a href="#" onclick="showSection('events')">Tadbirlar</a></li>
+<li><a href="#" onclick="showSection('volunteer')">Volontyor bo'lish</a></li>
+<li><a href="#" onclick="showSection('gallery')">Galereya</a></li>
+<li><a href="#" onclick="showSection('news')">Yangiliklar</a></li>
+<li><a href="#" onclick="showSection('partners')">Hamkorlar</a></li>
+<li><a href="#" onclick="showSection('contact')">Bog'lanish</a></li>
+</ul>
+<div class="nav-actions">
+<button class="btn btn-outline btn-sm" onclick="openLoginModal()"><i class="fas fa-user"></i> Kirish</button>
+<button class="mobile-menu-btn" onclick="toggleMobileMenu()"><i class="fas fa-bars"></i></button>
+</div>
+</div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+<a href="#" onclick="showSection('home'); toggleMobileMenu()">Bosh sahifa</a>
+<a href="#" onclick="showSection('about'); toggleMobileMenu()">Biz haqimizda</a>
+<a href="#" onclick="showSection('events'); toggleMobileMenu()">Tadbirlar</a>
+<a href="#" onclick="showSection('volunteer'); toggleMobileMenu()">Volontyor bo'lish</a>
+<a href="#" onclick="showSection('gallery'); toggleMobileMenu()">Galereya</a>
+<a href="#" onclick="showSection('news'); toggleMobileMenu()">Yangiliklar</a>
+<a href="#" onclick="showSection('partners'); toggleMobileMenu()">Hamkorlar</a>
+<a href="#" onclick="showSection('contact'); toggleMobileMenu()">Bog'lanish</a>
+</div>
+
+<div class="main-content">
+<!-- Hero -->
+<section id="home" class="hero">
+<div class="hero-bg-shapes">
+<div class="hero-shape hero-shape-1"></div>
+<div class="hero-shape hero-shape-2"></div>
+<div class="hero-shape hero-shape-3"></div>
+</div>
+<div class="hero-container">
+<div class="hero-content">
+<div class="hero-badge"><i class="fas fa-star"></i> Farg'ona JSTI huzurida</div>
+<h1 class="hero-title"><span>Saxovat</span> bilan birga hayotni yaxshilang</h1>
+<p class="hero-desc">"Saxovat" volontyorlik klubi — bu yoshlarning ijtimoiy faolligini oshirish, jamiyatga foyda keltirish va shaxsiy o'sish uchun yaratilgan platforma.</p>
+<div class="hero-buttons">
+<button class="btn btn-primary" onclick="showSection('volunteer')"><i class="fas fa-hand-holding-heart"></i> Volontyor bo'lish</button>
+<button class="btn btn-outline" onclick="showSection('events')"><i class="fas fa-calendar-alt"></i> Tadbirlarni ko'rish</button>
+</div>
+<div class="hero-stats">
+<div class="hero-stat"><div class="hero-stat-value" id="statVolunteers">1,250+</div><div class="hero-stat-label">Volontyorlar</div></div>
+<div class="hero-stat"><div class="hero-stat-value" id="statEvents">85+</div><div class="hero-stat-label">Tadbirlar</div></div>
+<div class="hero-stat"><div class="hero-stat-value" id="statHours">15K+</div><div class="hero-stat-label">Soatlar</div></div>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-image-wrapper">
+<div class="placeholder-img"><i class="fas fa-hands-helping"></i><span>Volontyorlar jamoasi</span></div>
+<div class="hero-floating-card card-1">
+<div class="floating-card-icon"><i class="fas fa-users"></i></div>
+<div class="floating-card-text"><h4>+50 yangi</h4><p>Bu oy qo'shildi</p></div>
+</div>
+<div class="hero-floating-card card-2">
+<div class="floating-card-icon"><i class="fas fa-award"></i></div>
+<div class="floating-card-text"><h4>320+ sertifikat</h4><p>Berildi</p></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!-- About -->
+<section id="about" class="section about-section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Biz haqimizda</div>
+<h2 class="section-title">Kim biz va nima qilamiz?</h2>
+<p class="section-desc">"Saxovat" volontyorlik klubi Farg'ona jamoat salomatligi tibbiyot instituti talabalari tomonidan tashkil etilgan.</p>
+</div>
+<div class="about-grid">
+<div class="about-image">
+<div class="placeholder-img"><i class="fas fa-users"></i><span>Bizning jamoa</span></div>
+<div class="about-image-badge"><h3>5+</h3><p>Yillik tajriba</p></div>
+</div>
+<div class="about-content">
+<h3>Missiyamiz va maqsadlarimiz</h3>
+<p>"Saxovat" volontyorlik klubi 2019-yilda tashkil etilgan bo'lib, Farg'ona jamoat salomatligi tibbiyot instituti talabalari tomonidan boshqariladi.</p>
+<div class="about-feature">
+<div class="about-feature-icon"><i class="fas fa-heart"></i></div>
+<p><strong>Sog'liqni saqlash</strong> — Aholining sog'lig'ini yaxshilash va tibbiy xabardorlikni oshirish</p>
+</div>
+<div class="about-feature">
+<div class="about-feature-icon"><i class="fas fa-graduation-cap"></i></div>
+<p><strong>Ta'lim</strong> — Yoshlarga ko'nikma va bilim berish orqali ularni rivojlantirish</p>
+</div>
+<div class="about-feature">
+<div class="about-feature-icon"><i class="fas fa-leaf"></i></div>
+<p><strong>Ekologiya</strong> — Atrof-muhitni asrash va ekologik ongni oshirish</p>
+</div>
+<div class="about-feature">
+<div class="about-feature-icon"><i class="fas fa-hand-holding-usd"></i></div>
+<p><strong>Xayriya</strong> — Muhtoj oilalarga yordam ko'rsatish va insonparvarlik</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Events -->
+<section id="events" class="section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Tadbirlar</div>
+<h2 class="section-title">Kelgusi tadbirlar</h2>
+<p class="section-desc">Bizning tadbirlarimizda ishtirok eting va jamiyatga o'z hissingizni qo'shing.</p>
+</div>
+<div class="events-grid" id="eventsGrid"></div>
+</section>
+
+<!-- Volunteer -->
+<section id="volunteer" class="volunteer-section" style="display:none;">
+<div class="volunteer-container">
+<div class="volunteer-info">
+<h2>Volontyor bo'lish</h2>
+<p>"Saxovat" klubiga qo'shiling va jamiyatga o'z hissingizni qo'shing. Sizning yordamingiz juda muhim!</p>
+<div class="volunteer-feature">
+<div class="volunteer-feature-icon"><i class="fas fa-certificate"></i></div>
+<div class="volunteer-feature-text"><h4>Rasmiy sertifikat</h4><p>Har bir tadbir uchun elektron sertifikat</p></div>
+</div>
+<div class="volunteer-feature">
+<div class="volunteer-feature-icon"><i class="fas fa-star"></i></div>
+<div class="volunteer-feature-text"><h4>Ball va reyting</h4><p>Faolligingiz uchun ball to'plang</p></div>
+</div>
+<div class="volunteer-feature">
+<div class="volunteer-feature-icon"><i class="fas fa-network-wired"></i></div>
+<div class="volunteer-feature-text"><h4>Tarmoq</h4><p>Yangi do'stlar va hamkorlar toping</p></div>
+</div>
+</div>
+<div class="volunteer-form">
+<h3>Ro'yxatdan o'tish</h3>
+<p>Formani to'ldiring va biz siz bilan bog'lanamiz</p>
+<form id="volunteerForm" onsubmit="handleVolunteerSubmit(event)">
+<div class="form-row">
+<div class="form-group"><label>Ism</label><input type="text" id="vFirstName" placeholder="Ismingiz" required></div>
+<div class="form-group"><label>Familiya</label><input type="text" id="vLastName" placeholder="Familiyangiz" required></div>
+</div>
+<div class="form-group"><label>Email</label><input type="email" id="vEmail" placeholder="email@example.com" required></div>
+<div class="form-group"><label>Telefon</label><input type="tel" id="vPhone" placeholder="+998 90 123 45 67" required></div>
+<div class="form-row">
+<div class="form-group"><label>Fakultet</label><select id="vFaculty" required><option value="">Tanlang</option><option>Tibbiy profilaktika</option><option>Sog'liqni saqlash</option><option>Hamshiralik ishi</option><option>Farmatsiya</option></select></div>
+<div class="form-group"><label>Kurs</label><select id="vCourse" required><option value="">Tanlang</option><option>1-kurs</option><option>2-kurs</option><option>3-kurs</option><option>4-kurs</option><option>5-kurs</option><option>6-kurs</option></select></div>
+</div>
+<div class="form-group"><label>Qiziqishlar</label><textarea id="vInterests" placeholder="Qaysi sohalarda volontyorlik qilishni istaysiz?"></textarea></div>
+<button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Ariza yuborish</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Gallery -->
+<section id="gallery" class="section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Galereya</div>
+<h2 class="section-title">Bizning tadbirlarimizdan lavhalar</h2>
+<p class="section-desc">Volontyorlik faoliyatimizdan eng yaxshi lahzalar.</p>
+</div>
+<div class="gallery-grid" id="galleryGrid"></div>
+</section>
+
+<!-- News -->
+<section id="news" class="section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Yangiliklar</div>
+<h2 class="section-title">So'nggi yangiliklar</h2>
+<p class="section-desc">Klubimiz hayotidan xabardor bo'ling.</p>
+</div>
+<div class="news-grid" id="newsGrid"></div>
+</section>
+
+<!-- Partners -->
+<section id="partners" class="section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Hamkorlar</div>
+<h2 class="section-title">Bizning hamkorlarimiz</h2>
+<p class="section-desc">Biz bilan hamkorlik qilayotgan tashkilotlar.</p>
+</div>
+<div class="partners-grid" id="partnersGrid"></div>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="section" style="display:none;">
+<div class="section-header">
+<div class="section-label">Bog'lanish</div>
+<h2 class="section-title">Biz bilan bog'laning</h2>
+<p class="section-desc">Savollaringiz bormi? Biz bilan bog'laning, biz yordam berishdan xursandmiz.</p>
+</div>
+<div class="contact-grid">
+<div class="contact-info">
+<h3>Biz bilan aloqa</h3>
+<p>Quyidagi ma'lumotlar orqali biz bilan bog'lanishingiz mumkin. Biz har doim sizning xizmatingizdamiz.</p>
+<div class="contact-item">
+<div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+<div><h4>Manzil</h4><p>Farg'ona shahar, Mustaqillik ko'chasi 123, Farg'ona JSTI</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-item-icon"><i class="fas fa-phone"></i></div>
+<div><h4>Telefon</h4><p>+998 73 123 45 67</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+<div><h4>Email</h4><p>info@saxovat.uz</p></div>
+</div>
+<div class="contact-item">
+<div class="contact-item-icon"><i class="fas fa-clock"></i></div>
+<div><h4>Ish vaqti</h4><p>Dushanba - Juma: 9:00 - 18:00</p></div>
+</div>
+<div class="contact-social">
+<a href="#"><i class="fab fa-telegram"></i></a>
+<a href="#"><i class="fab fa-instagram"></i></a>
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-youtube"></i></a>
+</div>
+</div>
+<div class="contact-form">
+<h3>Xabar yuborish</h3>
+<form onsubmit="handleContactSubmit(event)">
+<div class="form-row">
+<div class="form-group"><label>Ism</label><input type="text" placeholder="Ismingiz" required></div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="Email" required></div>
+</div>
+<div class="form-group"><label>Mavzu</label><input type="text" placeholder="Xabar mavzusi" required></div>
+<div class="form-group"><label>Xabar</label><textarea placeholder="Xabaringizni yozing..." rows="5" required></textarea></div>
+<button type="submit" class="btn btn-primary" style="width:100%;"><i class="fas fa-paper-plane"></i> Yuborish</button>
+</form>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+<div class="footer-container">
+<div class="footer-grid">
+<div>
+<a href="#" class="logo footer-logo">
+<div class="logo-icon"><i class="fas fa-hand-holding-heart"></i></div>
+<div class="logo-text">SAXOVAT <span style="color:var(--primary-light)">HUB</span></div>
+</a>
+<p class="footer-desc">"Saxovat" volontyorlik klubi — yoshlarning ijtimoiy faolligini oshirish va jamiyatga foyda keltirish uchun yaratilgan platforma.</p>
+</div>
+<div>
+<h4 class="footer-title">Sahifalar</h4>
+<ul class="footer-links">
+<li><a onclick="showSection('home')">Bosh sahifa</a></li>
+<li><a onclick="showSection('about')">Biz haqimizda</a></li>
+<li><a onclick="showSection('events')">Tadbirlar</a></li>
+<li><a onclick="showSection('volunteer')">Volontyor bo'lish</a></li>
+</ul>
+</div>
+<div>
+<h4 class="footer-title">Resurslar</h4>
+<ul class="footer-links">
+<li><a onclick="showSection('gallery')">Galereya</a></li>
+<li><a onclick="showSection('news')">Yangiliklar</a></li>
+<li><a onclick="showSection('partners')">Hamkorlar</a></li>
+<li><a onclick="showSection('contact')">Bog'lanish</a></li>
+</ul>
+</div>
+<div>
+<h4 class="footer-title">Aloqa</h4>
+<ul class="footer-links">
+<li><a href="tel:+998731234567">+998 73 123 45 67</a></li>
+<li><a href="mailto:info@saxovat.uz">info@saxovat.uz</a></li>
+<li><a href="#">Farg'ona sh.</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<p>2026 "Saxovat" volontyorlik klubi</p>
+<p>Farg'ona JSTI</p>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+<!-- VOLUNTEER CABINET -->
+<div id="volunteerCabinet" class="page">
+<div class="cabinet-layout">
+<aside class="cabinet-sidebar">
+<div class="cabinet-sidebar-header">
+<a href="#" class="logo">
+<div class="logo-icon"><i class="fas fa-hand-holding-heart"></i></div>
+<div class="logo-text">SAXOVAT <span style="color:var(--primary)">HUB</span></div>
+</a>
+</div>
+<ul class="cabinet-nav">
+<li><a class="active" onclick="showCabinetTab('profile')"><i class="fas fa-user"></i> Profil</a></li>
+<li><a onclick="showCabinetTab('events')"><i class="fas fa-calendar-alt"></i> Mening tadbirlarim</a></li>
+<li><a onclick="showCabinetTab('certificates')"><i class="fas fa-certificate"></i> Sertifikatlar</a></li>
+<li><a onclick="showCabinetTab('rating')"><i class="fas fa-star"></i> Reyting</a></li>
+<li><a onclick="logout()"><i class="fas fa-sign-out-alt"></i> Chiqish</a></li>
+</ul>
+</aside>
+<main class="cabinet-main">
+<div class="admin-header">
+<h1 id="cabinetTitle">Mening profilim</h1>
+<div class="admin-user">
+<span id="cabinetUserName">Azizbek Karimov</span>
+<div class="admin-user-avatar">A</div>
+</div>
+</div>
+
+<div id="cabinetProfile" class="admin-tab">
+<div class="profile-header">
+<div class="profile-avatar">A</div>
+<div class="profile-info">
+<h3>Azizbek Karimov</h3>
+<p>Tibbiy profilaktika | 3-kurs</p>
+</div>
+<div class="profile-stats">
+<div class="profile-stat"><div class="profile-stat-value">120</div><div class="profile-stat-label">Ball</div></div>
+<div class="profile-stat"><div class="profile-stat-value">15</div><div class="profile-stat-label">Tadbir</div></div>
+<div class="profile-stat"><div class="profile-stat-value">45</div><div class="profile-stat-label">Soat</div></div>
+</div>
+</div>
+<div class="stats-grid">
+<div class="achievement-card">
+<h4>Reyting</h4>
+<div class="value">#1</div>
+<div class="star-rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+</div>
+<div class="stat-card">
+<div class="stat-card-header"><span class="stat-card-label">Progress</span></div>
+<div style="margin-top:12px;">
+<div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:6px;"><span>Keyingi daraja</span><span>120/150</span></div>
+<div class="progress-bar"><div class="progress-fill" style="width:80%"></div></div>
+</div>
+</div>
+<div class="stat-card">
+<div class="stat-card-header"><span class="stat-card-label">Sertifikatlar</span><div class="stat-card-icon"><i class="fas fa-certificate"></i></div></div>
+<div class="stat-card-value">8</div>
+</div>
+</div>
+<div class="admin-card">
+<div class="admin-card-header"><h2>Shaxsiy ma'lumotlar</h2></div>
+<div class="form-row">
+<div class="form-group"><label>Ism</label><input type="text" value="Azizbek"></div>
+<div class="form-group"><label>Familiya</label><input type="text" value="Karimov"></div>
+</div>
+<div class="form-group"><label>Email</label><input type="email" value="aziz@email.com"></div>
+<div class="form-group"><label>Telefon</label><input type="tel" value="+998 90 123 45 67"></div>
+<div class="form-row">
+<div class="form-group"><label>Fakultet</label><select><option selected>Tibbiy profilaktika</option><option>Sog'liqni saqlash</option><option>Hamshiralik ishi</option><option>Farmatsiya</option></select></div>
+<div class="form-group"><label>Kurs</label><select><option>1-kurs</option><option>2-kurs</option><option selected>3-kurs</option><option>4-kurs</option><option>5-kurs</option><option>6-kurs</option></select></div>
+</div>
+<button class="btn btn-primary" onclick="showToast('Ma'lumotlar saqlandi','success')"><i class="fas fa-save"></i> Saqlash</button>
+</div>
+</div>
+
+<div id="cabinetEvents" class="admin-tab" style="display:none;">
+<div class="admin-card">
+<div class="admin-card-header"><h2>Mening tadbirlarim</h2></div>
+<div class="table-responsive">
+<table>
+<thead><tr><th>Tadbir</th><th>Sana</th><th>Soat</th><th>Status</th></tr></thead>
+<tbody>
+<tr><td><strong>Qon topshirish aksiyasi</strong></td><td>15.07.2026</td><td>4</td><td><span class="badge badge-success">Tasdiqlangan</span></td></tr>
+<tr><td><strong>Eko-tozalash</strong></td><td>20.07.2026</td><td>3</td><td><span class="badge badge-warning">Kutilmoqda</span></td></tr>
+<tr><td><strong>Keksalar uyi</strong></td><td>05.07.2026</td><td>5</td><td><span class="badge badge-success">Bajarilgan</span></td></tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+<div id="cabinetCertificates" class="admin-tab" style="display:none;">
+<div class="admin-card">
+<div class="admin-card-header"><h2>Mening sertifikatlarim</h2></div>
+<div class="certificate-preview">
+<h2>SERTIFIKAT</h2>
+<p>Ushbu sertifikat bilan tasdiqlanadi ki,</p>
+<h3>Azizbek Karimov</h3>
+<p>"Saxovat" volontyorlik klubi tomonidan tashkil etilgan<br><strong>Qon topshirish aksiyasi</strong> tadbirida faol ishtirok etgan.<br>Soat: <strong>4</strong> | Sana: <strong>05.07.2026</strong></p>
+<div class="certificate-seal"><i class="fas fa-star"></i></div>
+<p style="font-size:12px;">Farg'ona JSTI | "Saxovat" volontyorlik klubi</p>
+</div>
+<div style="text-align:center;margin-top:16px;">
+<button class="btn btn-primary"><i class="fas fa-download"></i> Yuklab olish</button>
+<button class="btn btn-outline"><i class="fas fa-share-alt"></i> Ulashish</button>
+</div>
+</div>
+</div>
+
+<div id="cabinetRating" class="admin-tab" style="display:none;">
+<div class="admin-card">
+<div class="admin-card-header"><h2>Mening reytingim</h2></div>
+<div style="text-align:center;padding:40px;">
+<div style="font-size:72px;font-weight:900;color:var(--primary);margin-bottom:16px;">#1</div>
+<div class="star-rating" style="font-size:24px;justify-content:center;margin-bottom:16px;"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+<p style="color:var(--text-light);margin-bottom:24px;">Siz 1,250 volontyor ichidan 1-o'rindasiz!</p>
+<div class="stats-grid" style="max-width:600px;margin:0 auto;">
+<div class="stat-card"><div class="stat-card-value">120</div><div class="stat-card-label">Ball</div></div>
+<div class="stat-card"><div class="stat-card-value">15</div><div class="stat-card-label">Tadbir</div></div>
+<div class="stat-card"><div class="stat-card-value">45</div><div class="stat-card-label">Soat</div></div>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</div>
+
+<!-- LOGIN MODAL -->
+<div class="modal-overlay" id="loginModal">
+<div class="modal">
+<div class="modal-header">
+<h2>Kirish</h2>
+<button class="modal-close" onclick="closeLoginModal()">&times;</button>
+</div>
+<div class="auth-tabs">
+<button class="auth-tab active" onclick="switchAuthTab('login')">Kirish</button>
+<button class="auth-tab" onclick="switchAuthTab('register')">Ro'yxatdan o'tish</button>
+</div>
+<div id="loginForm">
+<div class="form-group"><label>Email</label><input type="email" id="loginEmail" placeholder="email@example.com"></div>
+<div class="form-group"><label>Parol</label><input type="password" id="loginPassword" placeholder="Parolingiz"></div>
+<button class="btn btn-primary" style="width:100%;" onclick="handleLogin()"><i class="fas fa-sign-in-alt"></i> Kirish</button>
+<p style="text-align:center;margin-top:16px;font-size:13px;color:var(--text-light);">Admin uchun: admin@admin.uz / admin123</p>
+</div>
+<div id="registerForm" style="display:none;">
+<div class="form-row">
+<div class="form-group"><label>Ism</label><input type="text" placeholder="Ismingiz"></div>
+<div class="form-group"><label>Familiya</label><input type="text" placeholder="Familiyangiz"></div>
+</div>
+<div class="form-group"><label>Email</label><input type="email" placeholder="email@example.com"></div>
+<div class="form-group"><label>Parol</label><input type="password" placeholder="Parol"></div>
+<button class="btn btn-primary" style="width:100%;" onclick="showToast('Ro'yxatdan o'tish muvaffaqiyatli','success'); closeLoginModal(); showPage('mainSite');"><i class="fas fa-user-plus"></i> Ro'yxatdan o'tish</button>
+</div>
+</div>
+</div>
+
+<!-- EVENT MODAL -->
+<div class="modal-overlay" id="eventModal">
+<div class="modal">
+<div class="modal-header">
+<h2>Yangi tadbir</h2>
+<button class="modal-close" onclick="closeEventModal()">&times;</button>
+</div>
+<div class="form-group"><label>Tadbir nomi</label><input type="text" id="newEventName" placeholder="Tadbir nomi"></div>
+<div class="form-row">
+<div class="form-group"><label>Sana</label><input type="date" id="newEventDate"></div>
+<div class="form-group"><label>Vaqt</label><input type="time" id="newEventTime"></div>
+</div>
+<div class="form-group"><label>Joy</label><input type="text" id="newEventLocation" placeholder="Tadbir o'tadigan joy"></div>
+<div class="form-group"><label>Kategoriya</label><select id="newEventCategory"><option>Sog'liqni saqlash</option><option>Ekologiya</option><option>Ta'lim</option><option>Xayriya</option></select></div>
+<div class="form-group"><label>O'rinlar soni</label><input type="number" id="newEventSpots" value="20" min="1"></div>
+<div class="form-group"><label>Tavsif</label><textarea id="newEventDesc" placeholder="Tadbir haqida qisqacha ma'lumot"></textarea></div>
+<button class="btn btn-primary" style="width:100%;" onclick="addNewEvent()"><i class="fas fa-plus"></i> Tadbir qo'shish</button>
+</div>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
